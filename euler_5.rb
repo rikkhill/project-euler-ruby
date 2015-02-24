@@ -3,10 +3,13 @@
 require_relative 'euler_helpers'
 include Helper
 
+# Brute force method: the value is going to be between n and n!
+# Iterate through that range for a value whose factors are a superset
+# of {1..n}
 def smallest_multiple(n)
-
-  return smallest
+  range = (1..n).to_a
+  return Helper.lcm(range)
 end
 
 
-puts smallest_multiple(10)
+puts smallest_multiple(20)

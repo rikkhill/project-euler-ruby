@@ -13,7 +13,27 @@ class TestHelpers < Test::Unit::TestCase
 
   def test_hcf
     ints = [555,777,333]
-    assert_equal(Helper.hcf(ints).sort[-1], 111)
+    assert_equal(111, Helper.hcf(ints))
+  end
+
+  def test_lcm
+    ints = [330, 65, 15]
+    assert_equal(4290, Helper.lcm(ints))
+  end
+
+  def test_lcm_again
+    ints = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    assert_equal(2520, Helper.lcm(ints))
+  end
+
+  def test_sum_of_squares
+    ints = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    assert_equal(385, Helper.sum_of_squares(ints))
+  end
+
+  def test_sum_of_squares
+    ints = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    assert_equal(3025, Helper.square_of_sum(ints))
   end
 
   def test_primality

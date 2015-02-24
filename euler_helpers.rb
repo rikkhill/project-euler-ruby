@@ -1,7 +1,7 @@
 # Helper functions for Project Euler
 
 include Math
-
+require 'pp'
 ## Maths
 
 module Helper
@@ -17,16 +17,6 @@ module Helper
     end
 
     return factors.uniq
-  end
-
-# Highest common factor
-# Takes an array of integers and finds their highest common factor
-  def hcf(arr)
-    bigarr = []
-    arr.each do |elem|
-      bigarr << factors(elem)
-    end
-    return bigarr.reduce(:&)
   end
 
 # prime? - returns the primality of an integer
@@ -47,5 +37,29 @@ module Helper
       end
     end
     return true
+  end
+
+# Highest common factor
+# Takes an array of integers and finds their highest common factor
+  def hcf(arr)
+    bigarr = arr.map{ |x| factors(x) }
+    return bigarr.reduce(:&).sort.last
+  end
+
+# Lowest common multiple
+# We'll see how this one ends up going, shall we?
+  def lcm(arr)
+    return arr.reduce{|a,b| (a*b)/hcf([a,b])}
+  end
+
+# Sum of squares
+
+  def sum_of_squares(arr)
+    return arr.map{|x| x*x}.reduce(:+)
+  end
+
+# Square of sum
+  def square_of_sum(arr)
+    return arr.reduce(:+) ** 2
   end
 end
