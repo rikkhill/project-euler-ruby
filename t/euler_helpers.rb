@@ -36,6 +36,10 @@ class TestHelpers < Test::Unit::TestCase
     assert_equal(3025, Helper.square_of_sum(ints))
   end
 
+  def test_triangle_number
+    assert_equal(28, Helper.triangle_number(7))
+  end
+
   def test_primality
     primes = [
       1,

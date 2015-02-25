@@ -62,4 +62,8 @@ module Helper
   def square_of_sum(arr)
     return arr.reduce(:+) ** 2
   end
+
+  def triangle_number(n)
+    return (1..n).reduce(:+)
+  end
 end
