@@ -18,11 +18,7 @@ highest_count = 0
 highest_x = 0
 (1..999999).each do |x|
   collatz = collatz_count(x)
-  if x % 100000 == 0
-    puts "#{x}: #{collatz}"
-  end
   if collatz > highest_count
-    puts "#{x}: #{collatz}"
     highest_count = collatz
     highest_x = x
   end
