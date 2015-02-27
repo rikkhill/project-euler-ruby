@@ -1,7 +1,7 @@
 # Project Euler Problem 3
 # Largest prime factor
 
-require_relative '../euler_helpers'
+require_relative '../lib/euler_helpers.rb'
 include Helper
 
 def largest_prime_factor(int)

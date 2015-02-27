@@ -1,6 +1,6 @@
 # Project Euler Problem 6
 
-require_relative '../euler_helpers'
+require_relative '../lib/euler_helpers.rb'
 include Helper
 
 def ssq_minus_sqs(n)

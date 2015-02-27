@@ -3,7 +3,7 @@
 # Another inelegant brute force method
 # I blame mathematicians, on principle
 
-require_relative '../euler_helpers'
+require_relative '../lib/euler_helpers.rb'
 include Helper
 
 def triangular_divisors(n)

@@ -1,6 +1,6 @@
 # Tests for euler_helpers
 
-require_relative '../euler_helpers.rb'
+require_relative '../lib/euler_helpers.rb'
 require 'test/unit'
 include Helper
 

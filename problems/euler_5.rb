@@ -1,6 +1,6 @@
 # Project Euler problem 5
 
-require_relative '../euler_helpers'
+require_relative '../lib/euler_helpers.rb'
 include Helper
 
 # Brute force method: the value is going to be between n and n!
