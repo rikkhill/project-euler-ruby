@@ -1,6 +1,5 @@
 # Helper functions for Project Euler
 
-include Math
 require 'pp'
 ## Maths
 
@@ -65,5 +64,18 @@ module Helper
 
   def triangle_number(n)
     return (1..n).reduce(:+)
+  end
+end
+
+# File utils
+
+module FileHelper
+  # Take a file and read it in line by line, splitting into arrays
+  def read_into_array filename
+    builder = []
+    File.readlines(filename).each do |line|
+      builder << line.split.map{ |x| x.strip.to_i }
+    end
+    return builder.reject{ |x| x.empty? }
   end
 end

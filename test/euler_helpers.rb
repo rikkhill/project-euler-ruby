@@ -3,8 +3,9 @@
 require_relative '../lib/euler_helpers.rb'
 require 'test/unit'
 include Helper
+include FileHelper
 
-class TestHelpers < Test::Unit::TestCase
+class TestHelper < Test::Unit::TestCase
 
   def test_factors
     factors = [1,2,4,5,8,10,20,25,40,50,100,200]
@@ -69,6 +70,23 @@ class TestHelpers < Test::Unit::TestCase
     nonprimes.each do |nonprime|
       assert(!Helper.prime?(nonprime), "#{nonprime} is prime" )
     end
+
+  end
+
+end
+
+class TestFileHelper < Test::Unit::TestCase
+
+  def test_read_into_array
+
+    expected = [
+      [1, 2, 3, 4, 5],
+      [1, 2, 3, 4, 5, 6, 7],
+      [1, 2, 3],
+      [1]
+    ]
+    result = FileHelper.read_into_array('test/data/test_data.txt')
+    assert_equal(expected, result)
 
   end
 
