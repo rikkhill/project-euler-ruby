@@ -1,7 +1,7 @@
 # Project Euler Problem 7
 # Sequential primes
 
-require_relative 'euler_helpers'
+require_relative '../euler_helpers'
 include Helper
 
 def nth_prime(n)

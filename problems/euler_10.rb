@@ -2,7 +2,7 @@
 # Summation of primes
 # Another Brute Force Masterclass
 
-require_relative 'euler_helpers'
+require_relative '../euler_helpers'
 include Helper
 
 def sum_of_primes_below(n)
