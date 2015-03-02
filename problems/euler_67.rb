@@ -1,5 +1,5 @@
 # Project Euler Problem 67
-# Flagrantly stolen fro Problem 18
+# Flagrantly stolen from Problem 18
 
 require_relative '../lib/euler_helpers.rb'
 include FileHelper
