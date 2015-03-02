@@ -1,4 +1,5 @@
-# Project Euler Problem 18
+# Project Euler Problem 67
+# Flagrantly copied from Problem 18
 
 require_relative '../lib/euler_helpers.rb'
 require 'pp'
@@ -26,6 +27,6 @@ def longest_triangle_path(triangle)
   return merger
 end
 
-triangle = FileHelper.read_into_array('data/problem_18.txt')
+triangle = FileHelper.read_into_array('data/problem_67.txt')
 
 puts longest_triangle_path(triangle)
